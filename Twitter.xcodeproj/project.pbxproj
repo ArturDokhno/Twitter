@@ -18,6 +18,8 @@
 		75436578286861C4003203A6 /* NotificationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75436577286861C4003203A6 /* NotificationsController.swift */; };
 		7543657A286861E2003203A6 /* ConversationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75436579286861E2003203A6 /* ConversationsController.swift */; };
 		7543657C28688257003203A6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543657B28688257003203A6 /* Extension.swift */; };
+		757B7C28286D76DD0069FC7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B7C27286D76DD0069FC7B /* LoginController.swift */; };
+		757B7C2A286D77AA0069FC7B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B7C29286D77AA0069FC7B /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		75436577286861C4003203A6 /* NotificationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsController.swift; sourceTree = "<group>"; };
 		75436579286861E2003203A6 /* ConversationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsController.swift; sourceTree = "<group>"; };
 		7543657B28688257003203A6 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		757B7C27286D76DD0069FC7B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		757B7C29286D77AA0069FC7B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		7543656D28685E26003203A6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				757B7C26286D6E700069FC7B /* Authentication */,
 				7543657128685F07003203A6 /* MainTabController.swift */,
 				754365732868614C003203A6 /* FeedController.swift */,
 				7543657528686184003203A6 /* ExploreController.swift */,
@@ -128,6 +133,15 @@
 				7543657B28688257003203A6 /* Extension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		757B7C26286D6E700069FC7B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				757B7C27286D76DD0069FC7B /* LoginController.swift */,
+				757B7C29286D77AA0069FC7B /* RegistrationController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +219,11 @@
 				7543657A286861E2003203A6 /* ConversationsController.swift in Sources */,
 				7543655728685D34003203A6 /* AppDelegate.swift in Sources */,
 				7543657628686184003203A6 /* ExploreController.swift in Sources */,
+				757B7C28286D76DD0069FC7B /* LoginController.swift in Sources */,
 				7543657228685F07003203A6 /* MainTabController.swift in Sources */,
 				7543655928685D34003203A6 /* SceneDelegate.swift in Sources */,
 				754365742868614C003203A6 /* FeedController.swift in Sources */,
+				757B7C2A286D77AA0069FC7B /* RegistrationController.swift in Sources */,
 				7543657C28688257003203A6 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
