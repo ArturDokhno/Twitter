@@ -75,7 +75,8 @@ class LoginController: UIViewController {
     }
     
     @objc func handleShowSingUp() {
-        print("hanleShowSingUp")
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: - Helpers
