@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationController: UIViewController {
     
@@ -103,7 +104,20 @@ class RegistrationController: UIViewController {
     }
     
     @objc func handleRegistration() {
-        print("Sing Up")
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text
+        else {
+            return
+        }
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: Error is: \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successfully registered user")
+        }
     }
     
     // MARK: - Helpers
@@ -155,7 +169,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
         plusPhotoButton.layer.cornerRadius = 128 / 2
         plusPhotoButton.layer.masksToBounds = true
         plusPhotoButton.imageView?.contentMode = .scaleAspectFill
-        plusPhotoButton.imageView?.clipsToBounds = true 
+        plusPhotoButton.imageView?.clipsToBounds = true
         plusPhotoButton.layer.borderColor = UIColor.white.cgColor
         plusPhotoButton.layer.borderWidth = 3
         
