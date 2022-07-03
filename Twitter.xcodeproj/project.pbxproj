@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		751B9754287186F6000DCFEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B9753287186F6000DCFEF /* Constants.swift */; };
 		751B975628719B43000DCFEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 751B975528719B43000DCFEF /* GoogleService-Info.plist */; };
+		751B975828719EDC000DCFEF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B975728719EDC000DCFEF /* AuthService.swift */; };
 		7543655728685D34003203A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543655628685D34003203A6 /* AppDelegate.swift */; };
 		7543655928685D34003203A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543655828685D34003203A6 /* SceneDelegate.swift */; };
 		7543655E28685D34003203A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7543655C28685D34003203A6 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 /* Begin PBXFileReference section */
 		751B9753287186F6000DCFEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		751B975528719B43000DCFEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		751B975728719EDC000DCFEF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		7543655328685D34003203A6 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7543655628685D34003203A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7543655828685D34003203A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		7543656A28685D76003203A6 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				751B975728719EDC000DCFEF /* AuthService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				7543655728685D34003203A6 /* AppDelegate.swift in Sources */,
 				7543657628686184003203A6 /* ExploreController.swift in Sources */,
 				757B7C28286D76DD0069FC7B /* LoginController.swift in Sources */,
+				751B975828719EDC000DCFEF /* AuthService.swift in Sources */,
 				7543657228685F07003203A6 /* MainTabController.swift in Sources */,
 				7543655928685D34003203A6 /* SceneDelegate.swift in Sources */,
 				754365742868614C003203A6 /* FeedController.swift in Sources */,
