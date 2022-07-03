@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751B975228716EAD000DCFEF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 751B975128716EAD000DCFEF /* GoogleService-Info.plist */; };
 		7543655728685D34003203A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543655628685D34003203A6 /* AppDelegate.swift */; };
 		7543655928685D34003203A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7543655828685D34003203A6 /* SceneDelegate.swift */; };
 		7543655E28685D34003203A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7543655C28685D34003203A6 /* Main.storyboard */; };
@@ -21,13 +22,13 @@
 		757B7C28286D76DD0069FC7B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B7C27286D76DD0069FC7B /* LoginController.swift */; };
 		757B7C2A286D77AA0069FC7B /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B7C29286D77AA0069FC7B /* RegistrationController.swift */; };
 		757B7C2D286D82690069FC7B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757B7C2C286D82690069FC7B /* Utilities.swift */; };
-		757B7C2F286EF4A20069FC7B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 757B7C2E286EF4A20069FC7B /* GoogleService-Info.plist */; };
 		757B7C32286EF6980069FC7B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C31286EF6980069FC7B /* FirebaseAuth */; };
 		757B7C34286EF6980069FC7B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C33286EF6980069FC7B /* FirebaseDatabase */; };
 		757B7C36286EF6980069FC7B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C35286EF6980069FC7B /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		751B975128716EAD000DCFEF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7543655328685D34003203A6 /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7543655628685D34003203A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7543655828685D34003203A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		757B7C27286D76DD0069FC7B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		757B7C29286D77AA0069FC7B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		757B7C2C286D82690069FC7B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		757B7C2E286EF4A20069FC7B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 				7543655F28685D39003203A6 /* Assets.xcassets */,
 				7543656128685D39003203A6 /* LaunchScreen.storyboard */,
 				7543656428685D39003203A6 /* Info.plist */,
-				757B7C2E286EF4A20069FC7B /* GoogleService-Info.plist */,
+				751B975128716EAD000DCFEF /* GoogleService-Info.plist */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7543656328685D39003203A6 /* LaunchScreen.storyboard in Resources */,
-				757B7C2F286EF4A20069FC7B /* GoogleService-Info.plist in Resources */,
+				751B975228716EAD000DCFEF /* GoogleService-Info.plist in Resources */,
 				7543656028685D39003203A6 /* Assets.xcassets in Resources */,
 				7543655E28685D34003203A6 /* Main.storyboard in Resources */,
 			);

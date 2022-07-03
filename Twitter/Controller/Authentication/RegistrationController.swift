@@ -13,6 +13,7 @@ class RegistrationController: UIViewController {
     // MARK: - Properties
     
     private let imagePicker = UIImagePickerController()
+    private var profileImage: UIImage?
     
     private let plusPhotoButton: UIButton = {
         let button = UIButton(type: .system)
@@ -42,7 +43,7 @@ class RegistrationController: UIViewController {
     
     private lazy var usernameContainerView: UIView = {
         let view = Utilities().inputContainerView(withImage: "person_outline_white",
-                                                  textField: UsernameTextField )
+                                                  textField: usernameTextField )
         return view
     }()
     
@@ -62,7 +63,7 @@ class RegistrationController: UIViewController {
         return textField
     }()
     
-    private let UsernameTextField: UITextField = {
+    private let usernameTextField: UITextField = {
         let textField = Utilities().textField(withPlaceholder: "Username")
         return textField
     }()
@@ -104,8 +105,15 @@ class RegistrationController: UIViewController {
     }
     
     @objc func handleRegistration() {
+        guard let profileImage = profileImage else {
+            print("DEBUG: Please select a profile image...")
+            return
+        }
+        
         guard let email = emailTextField.text,
-              let password = passwordTextField.text
+              let password = passwordTextField.text,
+              let fullname = fullNameTextField.text,
+              let username = usernameTextField.text
         else {
             return
         }
@@ -116,7 +124,13 @@ class RegistrationController: UIViewController {
                 return
             }
             
-            print("DEBUG: Successfully registered user")
+            guard let uid = result?.user.uid else { return }
+            let values = ["email": email, "username": username, "fullname": fullname]
+            let reference = Database.database().reference().child("users").child(uid)
+            
+            reference.updateChildValues(values) { (error, reference) in
+                print("DEBUG: Successfully updated user information.. ")
+            }
         }
     }
     
@@ -165,6 +179,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let profileImage = info[.editedImage] as? UIImage else { return }
+        self.profileImage = profileImage
         
         plusPhotoButton.layer.cornerRadius = 128 / 2
         plusPhotoButton.layer.masksToBounds = true
