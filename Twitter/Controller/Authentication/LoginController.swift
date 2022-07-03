@@ -71,7 +71,18 @@ class LoginController: UIViewController {
     // MARK: - Selectors
     
     @objc func handleLogin() {
-        print("handleLogin")
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text
+        else { return }
+        
+        AuthService.shared.logUserIn(with: email, password: password) { (result, error) in
+            if let error = error {
+                print("DEBUG: Error logging in \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successful log in..")
+        }
     }
     
     @objc func handleShowSingUp() {
