@@ -28,6 +28,7 @@
 		757B7C34286EF6980069FC7B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C33286EF6980069FC7B /* FirebaseDatabase */; };
 		757B7C36286EF6980069FC7B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C35286EF6980069FC7B /* FirebaseStorage */; };
 		7582029F287327F800CD99A0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582029E287327F700CD99A0 /* UserService.swift */; };
+		758202A128732FE800CD99A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758202A028732FE800CD99A0 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		757B7C29286D77AA0069FC7B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		757B7C2C286D82690069FC7B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		7582029E287327F700CD99A0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		758202A028732FE800CD99A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		7543656F28685E2C003203A6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				758202A028732FE800CD99A0 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 				7543657628686184003203A6 /* ExploreController.swift in Sources */,
 				757B7C28286D76DD0069FC7B /* LoginController.swift in Sources */,
 				751B975828719EDC000DCFEF /* AuthService.swift in Sources */,
+				758202A128732FE800CD99A0 /* User.swift in Sources */,
 				7543657228685F07003203A6 /* MainTabController.swift in Sources */,
 				7543655928685D34003203A6 /* SceneDelegate.swift in Sources */,
 				754365742868614C003203A6 /* FeedController.swift in Sources */,
