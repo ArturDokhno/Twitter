@@ -27,6 +27,7 @@
 		757B7C32286EF6980069FC7B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C31286EF6980069FC7B /* FirebaseAuth */; };
 		757B7C34286EF6980069FC7B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C33286EF6980069FC7B /* FirebaseDatabase */; };
 		757B7C36286EF6980069FC7B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 757B7C35286EF6980069FC7B /* FirebaseStorage */; };
+		7582029F287327F800CD99A0 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7582029E287327F700CD99A0 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		757B7C27286D76DD0069FC7B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		757B7C29286D77AA0069FC7B /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		757B7C2C286D82690069FC7B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		7582029E287327F700CD99A0 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				751B975728719EDC000DCFEF /* AuthService.swift */,
+				7582029E287327F700CD99A0 /* UserService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7582029F287327F800CD99A0 /* UserService.swift in Sources */,
 				75436578286861C4003203A6 /* NotificationsController.swift in Sources */,
 				7543657A286861E2003203A6 /* ConversationsController.swift in Sources */,
 				757B7C2D286D82690069FC7B /* Utilities.swift in Sources */,
