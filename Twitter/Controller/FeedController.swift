@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import SDWebImage
 
 class FeedController: UIViewController {
     
     // MARK: - Properties
+    
+    var user: User? {
+        didSet { print("DEBUG: Did set user in feed controller..")}
+    }
     
     // MARK: - Lifecycle
 
@@ -27,5 +32,12 @@ class FeedController: UIViewController {
         let imageView = UIImageView(image: UIImage(named: "twitter_logo_blue"))
         imageView.contentMode = .scaleAspectFit
         navigationItem.titleView = imageView
+        
+        let profileImageView = UIImageView()
+        profileImageView.setDimensions(width: 32, height: 32)
+        profileImageView.backgroundColor = .twitterBlue
+        profileImageView.layer.cornerRadius = 32 / 2
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: profileImageView)
     }
 }
