@@ -11,6 +11,8 @@ class UploadTweetController: UIViewController {
     
     // MARK: - Properties
     
+    private let user: User
+    
     private lazy var tweetButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .twitterBlue
@@ -27,12 +29,32 @@ class UploadTweetController: UIViewController {
         return button
     }()
     
+    private let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
+        imageView.setDimensions(width: 40, height: 40)
+        imageView.layer.cornerRadius = 40 / 2
+        imageView.backgroundColor = .twitterBlue
+        return imageView
+    }()
+    
     // MARK: - Lifecycle
+    
+    init(user: User) {
+        self.user = user
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureUI()
+        print("DEBUG: User is \(user.username)")
     }
     
     // MARK: - Selectors
@@ -53,6 +75,17 @@ class UploadTweetController: UIViewController {
     
     func configureUI() {
         view.backgroundColor = .white
+        configureNavigationBar()
+        
+        view.addSubview(profileImageView)
+        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor,
+                                paddingTop: 16, paddingLeft: 16)
+        profileImageView.contentMode = .scaleAspectFill 
+        
+        profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
+    }
+    
+    func configureNavigationBar() {
         navigationController?.navigationBar.barTintColor = .white
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
