@@ -17,7 +17,7 @@ class TweetCell: UICollectionViewCell {
     
     private let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.setDimensions(width: 40, height: 40)
         imageView.layer.cornerRadius = 40 / 2
@@ -137,8 +137,9 @@ class TweetCell: UICollectionViewCell {
     
     func configure() {
         guard let tweet = tweet else { return }
-        
         captionLabel.text = tweet.caption
+        profileImageView.sd_setImage(with: tweet.user.profileImageUrl)
+        infoLabel.text = tweet.user.username
     }
     
 }
