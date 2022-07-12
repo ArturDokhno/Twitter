@@ -34,6 +34,7 @@
 		758202A128732FE800CD99A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758202A028732FE800CD99A0 /* User.swift */; };
 		75C001C72875A9D20036ED26 /* CaptionTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C001C62875A9D20036ED26 /* CaptionTextView.swift */; };
 		75C001C92875AEC30036ED26 /* TweetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C001C82875AEC30036ED26 /* TweetService.swift */; };
+		75CF07A3287DBDB400770930 /* ProfileHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75CF07A2287DBDB400770930 /* ProfileHeaderViewModel.swift */; };
 		75E47565287C391A00E58E5E /* ProfileFileterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E47564287C391A00E58E5E /* ProfileFileterView.swift */; };
 		75E47567287C3C3F00E58E5E /* ProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E47566287C3C3F00E58E5E /* ProfileFilterCell.swift */; };
 		75E5726C287BEF9600BE7239 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E5726B287BEF9600BE7239 /* ProfileController.swift */; };
@@ -68,6 +69,7 @@
 		758202A028732FE800CD99A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		75C001C62875A9D20036ED26 /* CaptionTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionTextView.swift; sourceTree = "<group>"; };
 		75C001C82875AEC30036ED26 /* TweetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetService.swift; sourceTree = "<group>"; };
+		75CF07A2287DBDB400770930 /* ProfileHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderViewModel.swift; sourceTree = "<group>"; };
 		75E47564287C391A00E58E5E /* ProfileFileterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFileterView.swift; sourceTree = "<group>"; };
 		75E47566287C3C3F00E58E5E /* ProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFilterCell.swift; sourceTree = "<group>"; };
 		75E5726B287BEF9600BE7239 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				7551AB83287B3F0C0060B2DF /* TweetViewModel.swift */,
+				75CF07A2287DBDB400770930 /* ProfileHeaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				75EF776A28784132000309B6 /* TweetCell.swift in Sources */,
 				75E47565287C391A00E58E5E /* ProfileFileterView.swift in Sources */,
 				757B7C28286D76DD0069FC7B /* LoginController.swift in Sources */,
+				75CF07A3287DBDB400770930 /* ProfileHeaderViewModel.swift in Sources */,
 				751B975828719EDC000DCFEF /* AuthService.swift in Sources */,
 				757B22FD2874733700D60967 /* UploadTweetController.swift in Sources */,
 				758202A128732FE800CD99A0 /* User.swift in Sources */,
