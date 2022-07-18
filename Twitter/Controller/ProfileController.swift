@@ -106,6 +106,10 @@ extension ProfileController : UICollectionViewDelegateFlowLayout {
 // MARK: - ProfileHeaderDelegate
 
 extension ProfileController: ProfileHeaderDelegate {
+    func handleEditProfileFollow(_ header: ProfileHeader) {
+        print("DEBUG: User follow")
+    }
+    
     func handleDismissal() {
         navigationController?.popViewController(animated: true)
     }
