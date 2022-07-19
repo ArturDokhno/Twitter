@@ -14,6 +14,7 @@ struct User {
     let username: String
     var profileImageUrl: URL?
     let uid: String
+    var isFallowed = false
     
     var isCurrentUser: Bool {
         return Auth.auth().currentUser?.uid == uid

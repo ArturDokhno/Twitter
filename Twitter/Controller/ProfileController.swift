@@ -14,7 +14,7 @@ class ProfileController: UICollectionViewController {
     
     // MARK: - Properties
     
-    private let user: User
+    private var user: User
     
     private var tweets = [Tweet]() {
         didSet { collectionView.reloadData() }
@@ -69,6 +69,7 @@ class ProfileController: UICollectionViewController {
 // MARK: - CollectionViewDataSource
 
 extension ProfileController {
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tweets.count
     }
@@ -78,22 +79,26 @@ extension ProfileController {
         cell.tweet = tweets[indexPath.row]
         return cell
     }
+    
 }
 
 // MARK: - UICollectionViewDelegate
 
 extension ProfileController {
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as! ProfileHeader
         header.user = user
         header.delegate = self
         return header
     }
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 
 extension ProfileController : UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: view.frame.width, height: 350)
     }
@@ -101,16 +106,32 @@ extension ProfileController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 120)
     }
+    
 }
 
 // MARK: - ProfileHeaderDelegate
 
 extension ProfileController: ProfileHeaderDelegate {
+    
     func handleEditProfileFollow(_ header: ProfileHeader) {
-        print("DEBUG: User follow")
+        
+        print("DEBUG: User is followed is \(user.isFallowed) before button tap")
+        
+        if user.isFallowed  {
+            UserService.shared.followUser(uid: user.uid) { (error, reference) in
+                self.user.isFallowed = false
+                print("DEBUG: User is followed is \(self.user.isFallowed) after button tap")
+            }
+        } else {
+            UserService.shared.unfollowUser(uid: user.uid) { (error, reference) in
+                self.user.isFallowed = true
+                print("DEBUG: User is followed is \(self.user.isFallowed) after button tap")
+            }
+        }
     }
     
     func handleDismissal() {
         navigationController?.popViewController(animated: true)
     }
+    
 }
