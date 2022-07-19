@@ -75,8 +75,7 @@ class ProfileController: UICollectionViewController {
         collectionView.contentInsetAdjustmentBehavior = .never
         
         collectionView.register(TweetCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        collectionView.register(ProfileHeader.self,
-                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+        collectionView.register(ProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: headerIdentifier)
     }
     
