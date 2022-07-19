@@ -123,6 +123,11 @@ extension ProfileController: ProfileHeaderDelegate {
     
     func handleEditProfileFollow(_ header: ProfileHeader) {
         
+        if user.isCurrentUser {
+            print("DEBUG: Show edit profile controller")
+            return
+        }
+        
         if user.isFallowed  {
             UserService.shared.followUser(uid: user.uid) { (error, reference) in
                 self.user.isFallowed = false
