@@ -15,7 +15,7 @@ class UploadTweetController: UIViewController {
     private let config: UploadTweetConfiguration
     private lazy var viewModel = UploadTweetViewModel(config: config)
     
-    private lazy var tweetButton: UIButton = {
+    private lazy var actionButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .twitterBlue
         button.setTitle("Tweet", for: .normal)
@@ -39,6 +39,14 @@ class UploadTweetController: UIViewController {
         imageView.layer.cornerRadius = 40 / 2
         imageView.backgroundColor = .twitterBlue
         return imageView
+    }()
+    
+    private lazy var replyLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .lightGray
+        label.widthAnchor.constraint(equalToConstant: view.frame.width).isActive = true
+        return label
     }()
     
     private let captionTextView = CaptionTextView()
@@ -96,10 +104,14 @@ class UploadTweetController: UIViewController {
         view.backgroundColor = .white
         configureNavigationBar()
         
-        let stack = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
-        stack.axis = .horizontal
+        let imageCaptionStack = UIStackView(arrangedSubviews: [profileImageView, captionTextView])
+        imageCaptionStack.axis = .horizontal
+        imageCaptionStack.spacing = 12
+        imageCaptionStack.alignment = .leading
+        
+        let stack = UIStackView(arrangedSubviews: [replyLabel ,imageCaptionStack])
+        stack.axis = .vertical
         stack.spacing = 12
-        stack.alignment = .leading
         
         view.addSubview(stack)
         stack.anchor(top: view.safeAreaLayoutGuide.topAnchor, left: view.leftAnchor, right: view.rightAnchor,
@@ -107,13 +119,20 @@ class UploadTweetController: UIViewController {
         profileImageView.contentMode = .scaleAspectFill 
         
         profileImageView.sd_setImage(with: user.profileImageUrl, completed: nil)
+        
+        actionButton.setTitle(viewModel.actionButtonTitle, for: .normal)
+        captionTextView.placeholderLabel.text = viewModel.placeholderText
+        
+        replyLabel.isHidden = !viewModel.shouldShowReplyLabel
+        guard let replyText = viewModel.replyText else { return }
+        replyLabel.text = replyText
     }
     
     func configureNavigationBar() {
         navigationController?.navigationBar.barTintColor = .white
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(handleCancel))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: tweetButton)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: actionButton)
     }
     
 }
