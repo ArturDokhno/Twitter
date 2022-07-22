@@ -44,6 +44,7 @@
 		75E5726E287C09A000BE7239 /* ProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E5726D287C09A000BE7239 /* ProfileHeader.swift */; };
 		75EF776828782D75000309B6 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EF776728782D75000309B6 /* Tweet.swift */; };
 		75EF776A28784132000309B6 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EF776928784132000309B6 /* TweetCell.swift */; };
+		75F3FBBC288B0DFD002DFCF6 /* UploadTweetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F3FBBB288B0DFD002DFCF6 /* UploadTweetViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		75E5726D287C09A000BE7239 /* ProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeader.swift; sourceTree = "<group>"; };
 		75EF776728782D75000309B6 /* Tweet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		75EF776928784132000309B6 /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		75F3FBBB288B0DFD002DFCF6 /* UploadTweetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTweetViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				7551AB83287B3F0C0060B2DF /* TweetViewModel.swift */,
 				75CF07A2287DBDB400770930 /* ProfileHeaderViewModel.swift */,
+				75F3FBBB288B0DFD002DFCF6 /* UploadTweetViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				7543657628686184003203A6 /* ExploreController.swift in Sources */,
 				751C7E272886EDC4001DD8F7 /* TweetController.swift in Sources */,
 				75E5726C287BEF9600BE7239 /* ProfileController.swift in Sources */,
+				75F3FBBC288B0DFD002DFCF6 /* UploadTweetViewModel.swift in Sources */,
 				75E5726E287C09A000BE7239 /* ProfileHeader.swift in Sources */,
 				75EF776A28784132000309B6 /* TweetCell.swift in Sources */,
 				75E47565287C391A00E58E5E /* ProfileFileterView.swift in Sources */,
@@ -477,7 +481,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -506,7 +510,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
