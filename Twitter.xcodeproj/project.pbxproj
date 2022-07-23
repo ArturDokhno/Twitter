@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		75116682288BFA8A00992DCA /* ActionSheetLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75116681288BFA8900992DCA /* ActionSheetLauncher.swift */; };
+		75116684288C31ED00992DCA /* ActionSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75116683288C31ED00992DCA /* ActionSheetCell.swift */; };
 		751B9754287186F6000DCFEF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B9753287186F6000DCFEF /* Constants.swift */; };
 		751B975828719EDC000DCFEF /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751B975728719EDC000DCFEF /* AuthService.swift */; };
 		751C7E272886EDC4001DD8F7 /* TweetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C7E262886EDC4001DD8F7 /* TweetController.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		75116681288BFA8900992DCA /* ActionSheetLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetLauncher.swift; sourceTree = "<group>"; };
+		75116683288C31ED00992DCA /* ActionSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetCell.swift; sourceTree = "<group>"; };
 		751B9753287186F6000DCFEF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		751B975728719EDC000DCFEF /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		751C7E262886EDC4001DD8F7 /* TweetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				75E47566287C3C3F00E58E5E /* ProfileFilterCell.swift */,
 				756A60AF2882BE830021D999 /* UserCell.swift */,
 				751C7E282886F01E001DD8F7 /* TweetHeader.swift */,
+				75116683288C31ED00992DCA /* ActionSheetCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				7543657A286861E2003203A6 /* ConversationsController.swift in Sources */,
 				756A60B02882BE830021D999 /* UserCell.swift in Sources */,
 				757B7C2D286D82690069FC7B /* Utilities.swift in Sources */,
+				75116684288C31ED00992DCA /* ActionSheetCell.swift in Sources */,
 				7543655728685D34003203A6 /* AppDelegate.swift in Sources */,
 				7543657628686184003203A6 /* ExploreController.swift in Sources */,
 				751C7E272886EDC4001DD8F7 /* TweetController.swift in Sources */,
