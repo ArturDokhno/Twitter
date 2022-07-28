@@ -21,7 +21,7 @@ class MainTabController: UITabBarController {
         }
     }
     
-    let actionButton: UIButton = {
+    lazy var actionButton: UIButton = {
         let button = UIButton()
         button.tintColor = .white
         button.backgroundColor = .twitterBlue

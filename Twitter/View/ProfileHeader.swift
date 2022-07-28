@@ -91,7 +91,7 @@ class ProfileHeader: UICollectionReusableView {
         return view
     }()
     
-    private let followingLabel: UILabel = {
+    private lazy var followingLabel: UILabel = {
         let label = UILabel()
         
         let followTap = UITapGestureRecognizer(target: self, action: #selector(handleFollowersTapped))
@@ -101,7 +101,7 @@ class ProfileHeader: UICollectionReusableView {
         return label
     }()
     
-    private let followersLabel: UILabel = {
+    private lazy var followersLabel: UILabel = {
         let label = UILabel()
         
         let followTap = UITapGestureRecognizer(target: self, action: #selector(handleFollowingTapped))
